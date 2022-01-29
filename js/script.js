@@ -28,7 +28,7 @@ document.querySelector('.switcher-btn').onclick = () =>{
 };
 
 var typed = new Typed('.typing-text', {
-    strings : ['Student','Tech Enthusiast','Developer'],
+    strings : ['','Tech Enthusiast.','Developer.','Student.'],
     loop : true,
     typeSpeed : 150
 });
