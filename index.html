@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="image/12345.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
     <!-- Pre-Loader -->
@@ -26,7 +27,6 @@
         <a href="#about">About</a>
         <a href="#services">Services</a>
         <a href="#contact">Contact</a>
-
     </nav>
     </header>
     <!-- header section ends -->
@@ -62,6 +62,7 @@
         <a href="https://drive.google.com/file/d/1rir66yY0oPzDyyaRruNs0FPFJLwAJrWN/view?usp=sharing" class="btn">Download My Resume</a>
         </div>
         <div class="share">
+            <h1>My <span> Socials</span></h1>
             <a href="https://www.facebook.com/alenwenish04" class="fab fa-facebook-f"></a>
             <a href="https://twitter.com/alenwenish" class="fab fa-twitter"></a>
             <a href="https://www.instagram.com/alenwenish/" class="fab fa-instagram"></a>
@@ -77,9 +78,9 @@
     <!-- About Section starts -->
     <section class="about" id="about">
 
-        <h1 class="heading"> <span>about</span> me </h1>
+        <h1 class="heading" data-aos="fade-down" data-aos-duration="800"> <span>about</span> me </h1>
         <div class="row">
-            <div class="box-container">
+            <div class="box-container" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
                 <div class="box">
                     <h3>4</h3>
                     <p>Projects Completed</p>                
@@ -89,18 +90,18 @@
                     <p>Awards Won</p>
                 </div>
             </div>
-            <div class="content">
+            <div class="content" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
                 <h3>My name is <span>Alen Wenish J</span></h3>
                 <p>I'm currently a 3rd Year Engineering Student pursuing Computer Science and Engineering course.
                     Being a Tech-Enthusiast, I love exploring new technologies and leveraging them to solve real-life problems.
                     I'm driven by the will to create an impact and encourage diversity and inclusion in communities.  
                 </p>
-                <a href="#" class="btn">contact me</a>
+                <a href="#contact" class="btn">contact me</a>
             </div>
         </div>
 
         <div class="row">
-            <div class="progress">
+            <div class="progress" data-aos="fade-right" data-aos-duration="800" data-aos-delay="500">
                 <h3> HTML <span>80%</span> </h3>
                 <div class="bar bar-1-1"><span></span></div>
                 <h3> CSS <span>70%</span> </h3>
@@ -110,7 +111,7 @@
                 <h3> Java <span>75%</span> </h3>
                 <div class="bar bar-1-4"><span></span></div>
             </div>
-            <div class="progress">
+            <div class="progress" data-aos="fade-left" data-aos-duration="800" data-aos-delay="500">
                 <h3> C Programming <span>90%</span> </h3>
                 <div class="bar bar-2-1"><span></span></div>
                 <h3> C++ Programming <span>85%</span> </h3>
@@ -127,9 +128,9 @@
 
     <!-- Services Section starts -->
     <section class="services" id="services">
-        <h1 class="heading"> my <span>Services</span> </h1>
+        <h1 class="heading" data-aos="fade-down" data-aos-duration="800"> my <span>Services</span> </h1>
 
-        <div class="box-container">
+        <div class="box-container" data-aos="fade-right" data-aos-duration="800" data-aos-delay="400">
             <div class="box">
                 <i class="fas fa-code"></i>
                 <h3>Programmer</h3>
@@ -147,8 +148,8 @@
         </div>
         </div>
         <br>
-        <h1 class="heading"> my <span>Projects</span> </h1>
-        <div class="box-contain">
+        <h1 class="heading" data-aos="fade-down" data-aos-duration="800"> my <span>Projects</span> </h1>
+        <div class="box-contain" data-aos="fade-left" data-aos-duration="800" data-aos-delay="400">
             <div class="box1">
                 <a href="https://github.com/alenwenish/Hospital-Management-System">
                 <img src="image/hospital.png" alt="">
@@ -181,8 +182,8 @@
     <!-- Contact section starts -->
 
     <section class="contact" id="contact">
-        <h1 class="heading"> <span>Contact</span> Me </h1>
-        <form method="post" name="google-sheet">
+        <h1 class="heading" data-aos="fade-down" data-aos-duration="800"> <span>Contact</span> Me </h1>
+        <form method="post" name="google-sheet" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
             <input type="text" name="Name" placeholder="Your Name" class="box">
             <input type="email" name="Email" placeholder="Your Email" class="box">
             <textarea name="Message" class="box" placeholder="Your Message" cols="30" rows="10"></textarea>
@@ -196,6 +197,7 @@
     <div class="credits"> Developed With ❤️ By <span>Alen Wenish</span> </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/script.js"></script>
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzTyJH9iNkf8lpcu7aXGH-xLTNT3G7tuTqfDAdRpoY5Mxd_C5V0AVqqejsFLEDT2KjP/exec'
@@ -206,6 +208,9 @@
                 .then(response => alert("Thanks for Sending a Message! Will Contact You Soon..."))
                 .catch(error => console.error('Error!', error.message))
             })
+    </script>
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>

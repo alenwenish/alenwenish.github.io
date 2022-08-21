@@ -2,9 +2,10 @@ let menu = document.querySelector('#menu-btn');
 let header = document.querySelector('.header');
 
 var loader = document.getElementById("preloader");
+
 window.addEventListener("load",function(){
     loader.style.display = "none";
-})
+});
 
 menu.onclick = () =>{
     menu.classList.toggle('fa-times');

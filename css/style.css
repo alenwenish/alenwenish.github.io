@@ -27,12 +27,15 @@
 }
 
 html{
+    max-width: 100%;
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
 body{
+    max-width: 100%;
+    overflow-x: hidden;
     background: var(--bg-color);
     padding-left: 30rem;
 }
@@ -325,6 +328,18 @@ section{
     color: var(--main-color);
 
 }
+.home .share h1{
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--black);
+    text-transform: uppercase;
+    padding-bottom: 0.2rem;
+}
+.home .share h1 span{
+    font-size: 2.5rem;
+    color: var(--main-color);
+    text-transform: uppercase;
+}
 
 .about .row{
     display: flex;
@@ -610,9 +625,9 @@ section{
 }
 #preloader{
     background: #000 url(../image/pre_loader.gif) no-repeat center center;
-    height: 100%;
+    height: 100vh;
     background-size: 30%;
     width: 100%;
     position: fixed;
-    z-index: 100;
+    z-index: 999999;
 }
