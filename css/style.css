@@ -626,8 +626,10 @@ section{
 #preloader{
     background: #000 url(../image/pre_loader.gif) no-repeat center center;
     height: 100vh;
-    background-size: 30%;
+    background-size: 40%;
     width: 100%;
+    top: 0;
+    left: 0;
     position: fixed;
     z-index: 999999;
 }
