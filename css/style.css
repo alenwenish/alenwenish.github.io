@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap');
 
 :root{
-    --main-color: #27ae60;
+    --main-color: #ffc312;
     --green: #27ae60;
     --black: #444;
     --light-color:#777;
@@ -341,13 +341,64 @@ section{
     text-transform: uppercase;
 }
 
+.home .scroll-down{
+    height: 60px;
+    width: 30px;
+    border: 2px solid var(--main-color);
+    position: absolute;
+    left: 47%;
+    bottom: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 500;
+}
+@media screen and (min-width: 1000px){
+    .home .scroll-down{
+        left: 59%;
+    }
+}
+.home .scroll-down::before,
+.home .scroll-down::after{
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    border: 2px solid var(--main-color);
+    height: 10px;
+    width: 10px;
+    transform: translate(-50%, -100%) rotate(45deg);
+    border-top: transparent;
+    border-left: transparent;
+    cursor: pointer;
+    animation: scroll-down 1s ease-in-out infinite;
+}
+.home .scroll-down::after{
+    top: 20%;
+    animation-delay: .3s;
+}
+@keyframes scroll-down{
+    0%{
+        opacity: 0;
+    }
+    30%{
+        opacity: 1;
+    }
+    60%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 90%;
+    }
+}
+
 .about .row{
     display: flex;
     align-items: center;
     flex-wrap: wrap-reverse;
     gap: 2rem;
 }
-.about .row .box-container{
+/* .about .row .box-container{
     flex:1 1 40rem;
 }
 .about .row .box-container .box{
@@ -367,7 +418,7 @@ section{
     color: var(--light-color);
     padding: 0.5rem 0;
 
-}
+} */
 .about .row .content{
     flex:1 1 40rem;
 }
@@ -388,6 +439,106 @@ section{
 }
 .about .row:nth-child(3){
     padding-top: 2rem;
+}
+.about .row .images{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    flex:1 1 60rem;
+}
+.about .row .images img{
+    height: 100%;
+    position: relative;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    transition: bottom 1s, left 1s;
+}
+.about .row .images .boy{
+    height: 50rem;
+    position: relative;
+    padding-bottom: 3rem;
+    align-items: center;
+    left: 10%;
+}
+.about .row .images .shape{
+    height: 40rem;
+    position: relative;
+    left: 56%;
+    padding-bottom: 3rem;
+}
+.about .row .images:hover .shape{
+    bottom: 40px;
+}
+.about .row .images:hover .boy{
+    left: 15%;
+}
+@media screen and (max-width: 385px) {
+    .about .row .images{
+        width: 50%;
+        height: 50%;
+        position: relative;
+        right: 15%; 
+        flex:1 1 60rem;
+    }
+    .about .row .images .boy{
+        height: 30rem;
+        position: relative;
+        padding-bottom: 3rem;
+        align-items: center;
+        left: 15%;
+    }
+    .about .row .images .shape{
+        height: 26rem;
+        position: relative;
+        left: 63%;
+        padding-bottom: 3rem;
+    }
+    .about .row .images:hover .shape{
+        bottom: 20px;
+    }
+    .about .row .images:hover .boy{
+        left: 20%;
+    }
+
+}
+
+@media screen and (max-width: 550px) and (min-width: 380px) {
+    .about .row .images{
+        width: 50%;
+        height: 50%;
+        position: relative;
+        right: 15%; 
+        flex:1 1 60rem;
+    }
+    .about .row .images .boy{
+        height: 30rem;
+        position: relative;
+        padding-bottom: 3rem;
+        align-items: center;
+        left: 15%;
+    }
+    .about .row .images .shape{
+        height: 30rem;
+        position: relative;
+        left: 63%;
+        padding-bottom: 3rem;
+    }
+    .about .row .images:hover .shape{
+        bottom: 20px;
+    }
+    .about .row .images:hover .boy{
+        left: 20%;
+    }
+
+}
+.about .row .technology{
+    display: block;
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    min-width: 50px;
+    flex: 1 1 40rem;
 }
 
 .about .row .progress{
@@ -495,6 +646,31 @@ section{
 .services .box-container .box:hover > *{
     color: #fff;
 }
+.services .box-container1{
+    flex:1 1 40rem;
+}
+.services .box-container1 .box{
+    flex: 1 1 18rem;
+    text-align: center;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: var(--box-shadow);
+}
+.services .box-container1 .box:hover{
+    box-shadow: var(--box-shadow-inset);
+    color: var(--main-color);
+}
+.services .box-container1 .box h3{
+    font-size: 5rem;
+    color: var(--black);
+    line-height: 1.1; 
+}
+.services .box-container1 .box p{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 0.5rem 0;
+
+}
 
 .services .box-contain{
     display: grid;
@@ -543,6 +719,7 @@ section{
     opacity: 1;
     color: var(--main-color);
 }
+
 
 
 
