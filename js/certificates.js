@@ -6,7 +6,7 @@ menu.onclick = () =>{
     header.classList.toggle('active');
 }
 nav.onclick = () =>{
-    menu.classList.remove('fa-times')
+    menu.classList.remove('fa-times');
     header.classList.remove('active');
 }
 
