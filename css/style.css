@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap');
 
 :root{
-    --main-color: #ffc312;
+    --main-color: #e8b007;
     --green: #27ae60;
     --black: #444;
     --light-color:#777;
@@ -671,7 +671,7 @@ section{
 }
 .services .box-container1 .box:hover{
     box-shadow: var(--box-shadow-inset);
-    color: var(--main-color);
+    background-color: var(--main-color);
 }
 .services .box-container1 .box h3{
     font-size: 5rem;

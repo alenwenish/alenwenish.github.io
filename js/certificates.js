@@ -1,9 +1,13 @@
 let menu = document.querySelector('#menu-btn');
 let header = document.querySelector('.header');
-
+let nav = document.querySelector(".navbar");
 menu.onclick = () =>{
     menu.classList.toggle('fa-times');
     header.classList.toggle('active');
+}
+nav.onclick = () =>{
+    menu.classList.remove('fa-times')
+    header.classList.remove('active');
 }
 
 let themeToggler = document.querySelector('#theme-toggler');
