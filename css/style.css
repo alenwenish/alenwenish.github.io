@@ -341,37 +341,32 @@ section{
     text-transform: uppercase;
 }
 
-.home .scroll-down{
+.home .share .scroll-down{
     height: 60px;
     width: 30px;
     border: 2px solid var(--main-color);
     position: absolute;
     left: 47%;
-    bottom: 20px;
+    top: 14rem;
     border-radius: 50px;
     cursor: pointer;
     z-index: 500;
 }
-@media screen and (min-width: 1000px){
-    .home .scroll-down{
-        left: 59%;
-    }
-}
 @media screen and (max-height: 700px){
-    .home .scroll-down{
+    .home .share .scroll-down{
         height: 40px;
         width: 25px;
-        bottom: 100px;
+        top: -8rem;
     }
-    .home .scroll-down::before,
-.home .scroll-down::after{
+    .home .share .scroll-down::before,
+.home .share .scroll-down::after{
     height: 0.5px;
-    width: 0.5px;
+    width: 0.1px;
     border: 0.1px;
 }
 }
-.home .scroll-down::before,
-.home .scroll-down::after{
+.home .share .scroll-down::before,
+.home .share .scroll-down::after{
     content: '';
     position: absolute;
     top: 10%;
@@ -385,7 +380,7 @@ section{
     cursor: pointer;
     animation: scroll-down 1s ease-in-out infinite;
 }
-.home .scroll-down::after{
+.home .share .scroll-down::after{
     top: 20%;
     animation-delay: .3s;
 }
@@ -411,27 +406,6 @@ section{
     flex-wrap: wrap-reverse;
     gap: 2rem;
 }
-/* .about .row .box-container{
-    flex:1 1 40rem;
-}
-.about .row .box-container .box{
-    flex: 1 1 18rem;
-    text-align: center;
-    padding: 2rem;
-    border-radius: 0.5rem;
-    box-shadow: var(--box-shadow);
-}
-.about .row .box-container .box h3{
-    font-size: 5rem;
-    color: var(--black);
-    line-height: 1.1; 
-}
-.about .row .box-container .box p{
-    font-size: 1.5rem;
-    color: var(--light-color);
-    padding: 0.5rem 0;
-
-} */
 .about .row .content{
     flex:1 1 40rem;
 }
